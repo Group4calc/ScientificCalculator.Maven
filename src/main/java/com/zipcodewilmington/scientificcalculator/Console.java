@@ -90,8 +90,8 @@ public class Console {
                     String cubeRtFormulaPrint = String.valueOf(cubeRtFormula.cubeRoot(firstNumber));
                     System.out.println(cubeRtFormulaPrint);
                 case "+/-":
-                    String switchSignFomrulaRead = String.valueOf(switchSignFormula.switchSign(firstNumber));
-                    System.out.println(switchSignFomrulaRead);
+                    String switchSignFormulaRead = String.valueOf(switchSignFormula.switchSign(firstNumber));
+                    System.out.println(switchSignFormulaRead);
                     break;
                 case "**/":
                     ScientificFeatures squareRootFormula = new ScientificFeatures();
