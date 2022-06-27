@@ -31,9 +31,10 @@ public class Console {
             // loop wrong operator true
             wrongOperator = true;
             // print for operator choices
-            System.out.println("For addition, subtraction, division, or multiplication please enter one of these as operator: + - / * ");
-            System.out.println("For the square, square-root, cube, cube-root, switch-sign or fac, please enter one of these as the operator **(square) */ (squareRoot) +/-(switch sign) fac (factorial)");
-            System.out.println("For the inverse, sine, cosine, tan, invsine, incosine or invtangent, please type one of the respective operators.");
+            System.out.println("Type the function within the ().");
+            System.out.println("For addition(+), subtraction(-), division(/), or multiplication(*)");
+            System.out.println("For the square(**), square-root(**/), cube(***), cube-root(***/), switch-sign(+/-) or factorial(fac)");
+            System.out.println("For the inverse, sine, cosine, tan, invsine, incosine or invtangent, write as they are presented");
 
             System.out.println();
             // print enter number
@@ -46,28 +47,32 @@ public class Console {
             System.out.print("Enter math operator to use for this calculation ");
             operator = Calculator.next();
 
-            System.out.print("Enter second number ");
-            secondNumber = Calculator.nextDouble();
-
-
             switch (operator) {
                 case "+":
                     CoreFeatures additionFormula = new CoreFeatures();
+                    System.out.print("Enter second number ");
+                    secondNumber = Calculator.nextDouble();
                     String additionFormulaRead = String.valueOf(additionFormula.add(firstNumber, secondNumber));
                     System.out.println(additionFormulaRead);
                     break;
                 case "-":
                     CoreFeatures subtractionFormula = new CoreFeatures();
+                    System.out.print("Enter second number ");
+                    secondNumber = Calculator.nextDouble();
                     String subtractionFormulaRead = String.valueOf(subtractionFormula.subtract(firstNumber, secondNumber));
                     System.out.println(subtractionFormulaRead);
                     break;
                 case "/":
                     CoreFeatures divisionFormula = new CoreFeatures();
+                    System.out.print("Enter second number ");
+                    secondNumber = Calculator.nextDouble();
                     String divisionFormulaRead = String.valueOf(divisionFormula.div(firstNumber, secondNumber));
                     System.out.println(divisionFormulaRead);
                     break;
                 case "*":
                     CoreFeatures multiplyFormula = new CoreFeatures();
+                    System.out.print("Enter second number ");
+                    secondNumber = Calculator.nextDouble();
                     String multiplyFormulaRead = String.valueOf(multiplyFormula.mult(firstNumber, secondNumber));
                     System.out.println(multiplyFormulaRead);
                     break;
@@ -75,15 +80,20 @@ public class Console {
                     ScientificFeatures squareFormula = new ScientificFeatures();
                     String squareFormulaPrint = String.valueOf(squareFormula.square(firstNumber));
                     System.out.println(squareFormulaPrint);
-                    break;
                 case "***":
                     ScientificFeatures cubeFormula = new ScientificFeatures();
-                    String cubeFormulaPrint = String.valueOf(cubeFormula.cubeRoot(firstNumber));
+                    String cubeFormulaPrint = String.valueOf(cubeFormula.cube(firstNumber));
+                    System.out.println(cubeFormulaPrint);
+                    break;
+                case "***/":
+                    ScientificFeatures cubeRtFormula = new ScientificFeatures();
+                    String cubeRtFormulaPrint = String.valueOf(cubeRtFormula.cubeRoot(firstNumber));
+                    System.out.println(cubeRtFormulaPrint);
                 case "+/-":
                     String switchSignFomrulaRead = String.valueOf(switchSignFormula.switchSign(firstNumber));
                     System.out.println(switchSignFomrulaRead);
                     break;
-                case "*/":
+                case "**/":
                     ScientificFeatures squareRootFormula = new ScientificFeatures();
                     String squareRootFormulaPrint = String.valueOf(squareRootFormula.squareRoot(firstNumber));
                     System.out.println(squareRootFormulaPrint);
@@ -110,16 +120,22 @@ public class Console {
                     break;
                 case "invsine":
                     ScientificFeatures arcSine = new ScientificFeatures();
+                    System.out.print("Enter second number ");
+                    secondNumber = Calculator.nextDouble();
                     String arcSineRead = String.valueOf(arcSine.inverseSine(firstNumber, secondNumber));
                     System.out.println(arcSineRead);
                     break;
                 case "invcosine":
                     ScientificFeatures arcCosine = new ScientificFeatures();
+                    System.out.print("Enter second number ");
+                    secondNumber = Calculator.nextDouble();
                     String arcCosineRead = String.valueOf(arcCosine.inverseCosine(firstNumber, secondNumber));
                     System.out.println(arcCosineRead);
                     break;
                 case "invtangent":
                     ScientificFeatures arcTan = new ScientificFeatures();
+                    System.out.print("Enter second number ");
+                    secondNumber = Calculator.nextDouble();
                     String arcTanFormula = String.valueOf(arcTan.inverseTangent(firstNumber, secondNumber));
                     System.out.println(arcTanFormula);
                     break;
